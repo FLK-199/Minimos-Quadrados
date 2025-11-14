@@ -11,14 +11,14 @@ a = np.zeros((len(fi), len(fi)))
 b = np.zeros(len(fi))
 
 def prodInt(i, j, c):
-    sum = 0
+    prod = 0
     if c == 'a':
         for k in xi:
-            sum += fi[i].subs(x, k)*fi[j].subs(x, k)
+            prod += fi[i].subs(x, k)*fi[j].subs(x, k)
     if c == 'b':
         for k in range(0, len(yi)):
-            sum += yi[k]*fi[i].subs(x, xi[k])
-    return sum
+            prod += yi[k]*fi[i].subs(x, xi[k])
+    return prod
 
 for i in range(0, len(fi)):
     for j in range(0, len(fi)):
